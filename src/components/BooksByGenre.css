@@ -1,0 +1,61 @@
+/* src/components/BooksByGenre.css */
+
+/* Carousel container */
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 80%; /* Adjust as needed */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Carousel track (holds the books) */
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Individual carousel item (book) */
+.carousel-item {
+  flex: 0 0 100%; /* Set book width */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 5px;
+  margin-right: 20px; /* Spacing between books */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Active carousel item */
+.carousel-item.active {
+  transform: scale(1.05); /* Increase the size of the active book */
+}
+
+/* Arrow buttons */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-arrow:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Previous and Next arrow buttons */
+.carousel-arrow.prev {
+  left: 0;
+}
+
+.carousel-arrow.next {
+  right: 0;
+}
