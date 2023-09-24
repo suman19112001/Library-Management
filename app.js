@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 
 // Define a route to get all books
-app.get('/api/books', async (req, res) => {
+app.get('https://library-mangagement.onrender.com/api/books', async (req, res) => {
   try {
     const books = await Book.find();
     res.json(books);
@@ -19,7 +19,7 @@ app.get('/api/books', async (req, res) => {
   }
 });
 
-app.get('/api/books/:genre', async (req, res) => {
+app.get('https://library-mangagement.onrender.com/api/books/:genre', async (req, res) => {
   const genre = req.params.genre;
 
   try {
@@ -35,7 +35,7 @@ app.get('/api/books/:genre', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-app.get('/api/books/book/:id', async (req, res) => {
+app.get('https://library-mangagement.onrender.com/api/books/book/:id', async (req, res) => {
     const bookId = req.params.id;
     console.log(bookId);
     try {
@@ -54,7 +54,7 @@ app.get('/api/books/book/:id', async (req, res) => {
 
 
 
-app.get('/api/books/search/:query', async (req, res) => {
+app.get('https://library-mangagement.onrender.com/api/books/search/:query', async (req, res) => {
   const query = req.params.query;
   console.log('Received query:', query);
   try {
