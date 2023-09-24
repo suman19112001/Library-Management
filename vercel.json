@@ -1,0 +1,39 @@
+{
+    "name": "ProfileBuilder",
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "build/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "app.js"
+      },
+      {
+        "src": "/api/book",
+        "dest": "app.js"
+      },
+      {
+        "src": "/api/books/book",
+        "dest": "app.js"
+      },
+      {
+        "src": "/api/books/search",
+        "dest": "app.js"
+      },
+      {
+        "src": "/",
+        "dest": "build/index.html"
+      },
+      {
+        "src": "/(.+)",
+        "dest": "build/$1"
+      }
+    ]
+  }
