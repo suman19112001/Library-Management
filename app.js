@@ -7,7 +7,6 @@ const app = express();
 
 app.use(cors());
 
-// Define a route to get all books
 app.get('/api/books', async (req, res) => {
   try {
     const books = await Book.find();
