@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('./db'); // Import the MongoDB connection
+const mongoose = require('./db'); 
 const Book = require('./book'); // Import the Book model
 
 const app = express();
