@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('./db'); 
-const Book = require('./book'); // Import the Book model
+const Book = require('./book'); 
 
 const app = express();
 
