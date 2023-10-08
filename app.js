@@ -59,7 +59,7 @@ app.get('/api/books/search/:query', async (req, res) => {
     
     const books = await Book.find({
       $or: [
-        { title: { $regex: query, $options: 'i' } }, // Case-insensitive title search
+        { title: { $regex: query, $options: 'i' } }, 
         { author: { $regex: query, $options: 'i' } }, // Case-insensitive author search
         { genre: { $regex: query, $options: 'i' } }, // Case-insensitive genre search
         { year: { $regex: query, $options: 'i' } }// Case-insensitive year search
