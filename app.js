@@ -61,7 +61,7 @@ app.get('/api/books/search/:query', async (req, res) => {
       $or: [
         { title: { $regex: query, $options: 'i' } }, 
         { author: { $regex: query, $options: 'i' } },
-        { genre: { $regex: query, $options: 'i' } }, // Case-insensitive genre search
+        { genre: { $regex: query, $options: 'i' } }, 
         { year: { $regex: query, $options: 'i' } }// Case-insensitive year search
       ],
     }).maxTimeMS(30000);
