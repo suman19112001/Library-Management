@@ -51,7 +51,6 @@ app.get('/api/books/book/:id', async (req, res) => {
   });
 
 
-
 app.get('/api/books/search/:query', async (req, res) => {
   const query = req.params.query;
   console.log('Received query:', query);
