@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('./db'); 
 const Book = require('./book'); 
-
 const app = express();
 
 app.use(cors());
