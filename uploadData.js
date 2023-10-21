@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Book = require('./book'); // Import the Book model
-const data = require('./data.json'); // Replace with your JSON data file
+const data = require('./data.json');
 require('dotenv').config();
 
 async function uploadData() {
