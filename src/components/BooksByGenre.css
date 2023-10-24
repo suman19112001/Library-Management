@@ -4,7 +4,7 @@
 .carousel-container {
   display: flex;
   overflow: hidden;
-  width: 80%; /* Adjust as needed */
+  width: 80%; 
   margin: 0 auto;
   position: relative;
 }
