@@ -6,7 +6,6 @@ const BookDetail = ({ match }) => {
     const [book, setBook] = useState(null);
 
     useEffect(() => {
-        // Fetch book details using the bookId
         fetch(`http://localhost:3001/api/books/book/${id}`)
             .then((response) => response.json())
             .then((data) => setBook(data))
