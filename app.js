@@ -5,7 +5,6 @@ const Book = require('./book');
 const app = express();
 
 app.use(cors());
-
 app.get('/api/books', async (req, res) => {
   try {
     const books = await Book.find();
