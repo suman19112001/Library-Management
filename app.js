@@ -14,7 +14,6 @@ app.get('/api/books', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-
 app.get('/api/books/:genre', async (req, res) => {
   const genre = req.params.genre;
 
