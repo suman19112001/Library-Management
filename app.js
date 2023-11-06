@@ -52,7 +52,6 @@ app.get('/api/books/search/:query', async (req, res) => {
   const query = req.params.query;
   console.log('Received query:', query);
   try {
-    
     const books = await Book.find({
       $or: [
         { title: { $regex: query, $options: 'i' } }, 
