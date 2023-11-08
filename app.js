@@ -32,6 +32,7 @@ app.get('/api/books/:genre', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 app.get('/api/books/book/:id', async (req, res) => {
     const bookId = req.params.id;
     console.log(bookId);
