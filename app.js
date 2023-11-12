@@ -18,7 +18,6 @@ app.get('/api/books', async (req, res) => {
 
 app.get('/api/books/:genre', async (req, res) => {
   const genre = req.params.genre;
-
   try {
     const books = await Book.find({ genre }).maxTimeMS(30000);
 
